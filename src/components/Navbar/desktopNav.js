@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar,Icon,IconButton,Dropdown,Container,Footer,Header,Sidenav,Sidebar,Nav,Content} from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
+import Cards from '../card';
 
 const headerStyles = {
     padding: 18,
@@ -117,9 +118,8 @@ const headerStyles = {
                     </Navbar.Header>
                 </Navbar>
                 <Content>
-                    <div style={{padding:"50px"}}>
-                        <h1>Hello World</h1>
-                    </div>
+                  <Cards/>
+                
                 </Content>
             </Container>
           </Container>

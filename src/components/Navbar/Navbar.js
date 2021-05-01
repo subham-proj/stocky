@@ -17,6 +17,7 @@ function NavBar() {
 
           <Responsive displayIn={["Mobile"]}>
               <MobileNav/>
+              
           </Responsive>
 
         </div>
