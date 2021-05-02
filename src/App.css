@@ -1,0 +1,33 @@
+.cardstyle{
+    color: white;
+    background-color: #272E48;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+
+}
+
+.sidenav{
+    height: 100vh;
+    background-color: #272E48!important;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nav{
+    background-color: #272E48!important;
+    box-shadow: 0 7px 20px -1 rgba(0, 0, 0, 0.12);
+}
+
+.hamburger{
+    background-color: #272E48!important;
+}
+
+.hamburger-x{
+    margin-top: -20px;
+}
+
+.sitename{
+    color: white;
+    padding-left: 15px;
+    font-size: xx-large;
+    font-weight: bold;
+}

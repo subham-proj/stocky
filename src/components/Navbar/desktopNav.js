@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar,Icon,IconButton,Dropdown,Container,Footer,Header,Sidenav,Sidebar,Nav,Content} from 'rsuite';
+import {Navbar,Icon,IconButton,Dropdown,Container,Sidenav,Sidebar,Nav,Content} from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import Cards from '../card';
 
@@ -7,25 +7,19 @@ const headerStyles = {
     padding: 18,
     fontSize: 16,
     height: 56,
-    background: '#34c3ff',
     color: ' #fff',
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   };
   
-  const iconStyles = {
-    width: 56,
-    height: 56,
-    lineHeight: '56px',
-    textAlign: 'center'
-  };
   
   const NavToggle = ({ expand, onChange }) => {
     return (
-      <Navbar className="nav-toggle">
+      <Navbar className="nav-toggle hamburger">
         <Navbar.Header pullRight onClick={onChange} style={{padding:"20px",paddingTop:"5px"}}>
   
-                <IconButton icon={<Icon icon="align-justify" size="5x"/>} size="lg" />
+                <IconButton className="hamburger-x" icon={<Icon icon="align-justify" size="5x"/>} size="lg" />
+                <span className="sitename">StockyIn </span>
         </Navbar.Header>
       </Navbar>
     );
@@ -57,18 +51,18 @@ const headerStyles = {
     render() {
       const { expand } = this.state;
       return (
-        <div className="show-fake-browser sidebar-page">
+        <div>
           <Container>
             <Sidebar
               style={{ display: 'flex', flexDirection: 'column' }}
               width={expand ? 260 : 56}
               collapsible
             >
-              <Sidenav expanded={expand} defaultOpenKeys={['3','4']} appearance="subtle" activeKey={this.state.activeKey} onSelect={this.handleSelect}>
+              <Sidenav expanded={expand} defaultOpenKeys={['3','4']} className="sidenav" activeKey={this.state.activeKey} onSelect={this.handleSelect}>
                 <Sidenav.Header>
                   <div style={headerStyles}>
                     <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />
-                    <span style={{ marginLeft: 12 }}> BRAND</span>
+                    <span style={{ marginLeft: 12,fontSize:"20px",fontWeight:"bold" }}> StockyIn </span>
                   </div>
                 </Sidenav.Header>
                 <Sidenav.Body>
@@ -111,10 +105,11 @@ const headerStyles = {
             </Sidebar>
   
             <Container>
-                <Navbar>
+                <Navbar className="nav">
                     <Navbar.Header>
-                        <NavToggle expand={expand} onChange={this.handleToggle} />
-
+                    
+                        
+                        <NavToggle  expand={expand} onChange={this.handleToggle} />
                     </Navbar.Header>
                 </Navbar>
                 <Content>
